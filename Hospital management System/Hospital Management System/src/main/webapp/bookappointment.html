@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Heading styling */
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Form container */
+        form {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Label styling */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        /* Input fields styling */
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Focus state for input fields */
+        input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        }
+
+        /* Button styling */
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Media Query for responsiveness */
+        @media (max-width: 480px) {
+            form {
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            label, input, button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Book an Appointment</h2>
+
+    <form action="BookAppointment" method="POST">
+        <label for="pid">Patient ID:</label>
+        <input type="text" id="pid" name="pid" required>
+
+        <label for="did">Doctor ID:</label>
+        <input type="text" id="did" name="did" required>
+
+        <label for="app_date">Appointment Date:</label>
+        <input type="date" id="app_date" name="app_date" required>
+
+        <label for="app_time">Appointment Time:</label>
+        <input type="time" id="app_time" name="app_time" required>
+
+        <button type="submit">Book Appointment</button>
+    </form>
+</body>
+</html>

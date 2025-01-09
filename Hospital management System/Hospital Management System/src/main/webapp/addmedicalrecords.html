@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Medical Records</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-size: 14px;
+            color: #333;
+            display: block;
+        }
+        input[type="text"], input[type="date"], textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Add Medical Record</h1>
+    <form action="AddMedicalRecords" method="post">
+        <div class="form-group">
+            <label for="pid">Patient ID:</label>
+            <input type="text" id="pid" name="pid" required>
+        </div>
+
+        <div class="form-group">
+            <label for="did">Doctor ID:</label>
+            <input type="text" id="did" name="did" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dai">Diagnosis:</label>
+            <textarea id="dai" name="dai" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="pre">Prescription:</label>
+            <textarea id="pre" name="pre" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+        <button type="submit">Submit</button>
+        
+        <div class="error">
+            <!-- Error messages will go here -->
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
